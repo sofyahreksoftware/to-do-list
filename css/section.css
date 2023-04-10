@@ -1,0 +1,47 @@
+.section {
+  background-color: white;
+  margin: 10px 40px;
+  padding: 10px;
+}
+.section__header {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-width: 0 0 1px;
+}
+.section__list {
+  list-style-type: none;
+  margin: 50px auto;
+}
+.section__listItem {
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0;
+}
+.section__button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  justify-self: center;
+}
+
+.section__button:hover {
+  cursor: pointer;
+}
+.section__button.section__button:click {
+  border: 1px solid black;
+}
+.section__buttonDone1 {
+  background-image: url("https://i.postimg.cc/7br2VSqR/buttondone1.png");
+  background-size: contain;
+  background-position: center;
+}
+.section__buttonDone2 {
+  background-image: url("https://i.postimg.cc/tgw7yBmm/buttondone2.png");
+  background-size: contain;
+  background-position: center;
+}
+.section__buttonRemove {
+  background-image: url("https://i.postimg.cc/pXwq4Cqq/basket.png");
+  background-size: contain;
+  background-position: center;
+}
+
