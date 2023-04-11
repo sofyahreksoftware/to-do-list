@@ -1,8 +1,8 @@
-.grid {
+.gridTask {
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
   grid-gap: 10px;
 }
-.grid__item {
+.gridTask__item {
   align-self: center;
 }
