@@ -26,8 +26,8 @@
 .section__button:hover {
   cursor: pointer;
 }
-.section__button.section__button:click {
-  border: 1px solid black;
+.section__button:active {
+  border: 2px solid black;
 }
 .section__buttonDone1 {
   background-image: url("https://i.postimg.cc/7br2VSqR/buttondone1.png");
