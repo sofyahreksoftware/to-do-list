@@ -1,13 +1,18 @@
 const tasks = [
   {
     content: "example content",
-    done: true || false,
+    done: false,
   },
   {
     content: "example content",
-    done: true || false,
+    done: true,
   },
 ];
+
+toggleTaskDone = (index) => {
+  tasks[index].done = !tasks[index].done;
+  render();
+};
 
 const removeTask = (index) => {
   tasks.splice(index, 1);
@@ -31,20 +36,7 @@ const onFormSubmit = (event, taskInput, form) => {
     form.reset();
   }
 };
-
-const render = () => {
-  const tasksList = document.querySelector(".js-tasksList");
-
-  let htmlString = "";
-  for (const task of tasks) {
-    htmlString += `<li class="gridTask section__listItem">
-     <button class="section__button section__buttonDone1 gridTask__item js-buttonDone"></button>
-     <p class="gridTask__item"> ${task.content}</p>
-     <button class="section__button section__buttonRemove gridTask__item js-buttonRemove"></button>
-     </li>`;
-  }
-  tasksList.innerHTML = htmlString;
-
+const bindEvents = () => {
   const removingTaskButtons = document.querySelectorAll(".js-buttonRemove");
 
   removingTaskButtons.forEach((removingTaskButton, index) => {
@@ -53,6 +45,38 @@ const render = () => {
     });
   });
 
+  const togglingTaskDoneButtons = document.querySelectorAll(".js-buttonDone");
+
+  togglingTaskDoneButtons.forEach((togglingTaskDoneButton, index) => {
+    togglingTaskDoneButton.addEventListener("click", () => {
+      toggleTaskDone(index);
+    });
+  });
+};
+
+const render = () => {
+  const tasksList = document.querySelector(".js-tasksList");
+
+  let htmlString = "";
+  for (const task of tasks) {
+    htmlString += `<li class="gridTask section__listItem">
+    <button class="section__button gridTask__item js-buttonDone 
+    ${
+      task.done === true ? "section__buttonDone2" : "section__buttonDone1"
+    }"></button> 
+
+     <p class="gridTask__item section__taskContent
+     ${task.done === true ? "section__taskContent--crossed" : ""}">${
+      task.content
+    }</p>
+
+
+     <button class="section__button section__buttonRemove gridTask__item js-buttonRemove"></button>
+     </li>`;
+  }
+  tasksList.innerHTML = htmlString;
+
+  bindEvents();
 };
 
 const init = () => {
