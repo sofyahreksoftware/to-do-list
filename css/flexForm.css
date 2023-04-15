@@ -1,10 +1,15 @@
 .flexForm {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   margin: 5px;
 }
-
+@media (max-width: 767px) {
+  .flexForm {
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-gap: 10px;
+  }
+}
 .flexForm__input {
   flex-basis: 5;
   flex-grow: 5;
@@ -19,7 +24,19 @@
   flex-grow: 1;
   padding: 5px;
 }
-
+@media (max-width: 767px) {
+  .flexForm__button {
+    flex-grow: 1;
+    flex-basis: 100%;
+    flex-shrink: 0;
+  }
+  .flexForm__input {
+    flex-grow: 1;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    margin: 0px;
+  }
+}
 .flexForm__button:hover {
   cursor: pointer;
 }
