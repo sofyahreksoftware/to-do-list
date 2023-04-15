@@ -23,7 +23,10 @@ const addNewTask = (newTaskContent) => {
   tasks.push({ content: newTaskContent });
   render();
 };
-
+removeFirstTwoTasks = () => {
+  tasks.splice(0, 2);
+  render();
+};
 const onFormSubmit = (event, taskInput, form) => {
   event.preventDefault();
 
@@ -80,6 +83,7 @@ const render = () => {
 };
 
 const init = () => {
+  removeFirstTwoTasks();
   render();
 
   const form = document.querySelector(".js-form");
