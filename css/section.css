@@ -11,6 +11,7 @@
 .section__list {
   list-style-type: none;
   margin: 50px auto;
+  padding: 0;
 }
 .section__listItem {
   border-bottom: 1px solid #ddd;
@@ -33,12 +34,12 @@
 .section__button:active {
   border: 2px solid black;
 }
-.section__buttonDone1 {
+.section__buttonGreen {
   background-image: url("https://i.postimg.cc/7br2VSqR/buttondone1.png");
   background-size: contain;
   background-position: center;
 }
-.section__buttonDone2 {
+.section__buttonCheckmark {
   background-image: url("https://i.postimg.cc/tgw7yBmm/buttondone2.png");
   background-size: contain;
   background-position: center;

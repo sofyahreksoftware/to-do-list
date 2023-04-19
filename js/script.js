@@ -31,14 +31,12 @@
   const onFormSubmit = (event, taskInput, form) => {
     event.preventDefault();
 
-    let newTaskContent = taskInput.value.trim();
-    if (newTaskContent === "") {
-      taskInput.focus();
-      form.reset();
-    } else {
+    const newTaskContent = taskInput.value.trim();
+    if (newTaskContent !== "") {
       addNewTask(newTaskContent);
-      form.reset();
     }
+    taskInput.focus();
+    form.reset();
   };
   const bindEvents = () => {
     const removingTaskButtons = document.querySelectorAll(".js-buttonRemove");
@@ -64,19 +62,14 @@
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `<li class="gridTask section__listItem">
-    <button class="section__button gridTask__item js-buttonDone 
-    ${
-      task.done === true ? "section__buttonDone2" : "section__buttonDone1"
+    <button class="section__button gridTask__item js-buttonDone ${
+      task.done ? "section__buttonCheckmark" : "section__buttonGreen"
     }"></button> 
-
-     <p class="gridTask__item section__taskContent
-     ${task.done === true ? "section__taskContent--crossed" : ""}">${
-        task.content
-      }</p>
-
-
-     <button class="section__button section__buttonRemove gridTask__item js-buttonRemove"></button>
-     </li>`;
+    <p class="gridTask__item section__taskContent
+    ${task.done ? "section__taskContent--crossed" : ""}">${task.content}</p>
+    <button class="section__button section__buttonRemove gridTask__item js-buttonRemove">
+    </button>
+    </li>`;
     }
     tasksList.innerHTML = htmlString;
 
