@@ -16,6 +16,12 @@
 .section__listItem {
   border-bottom: 1px solid #ddd;
   margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-gap: 10px;
+}
+.section__listItemElement {
+  align-self: center;
 }
 
 .section__taskContent--crossed {

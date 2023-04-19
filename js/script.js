@@ -62,12 +62,12 @@
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `<li class="gridTask section__listItem">
-    <button class="section__button gridTask__item js-buttonDone ${
+    <button class="section__button section__listItemElement js-buttonDone ${
       task.done ? "section__buttonCheckmark" : "section__buttonGreen"
     }"></button> 
-    <p class="gridTask__item section__taskContent
+    <p class="section__listItemElement section__taskContent
     ${task.done ? "section__taskContent--crossed" : ""}">${task.content}</p>
-    <button class="section__button section__buttonRemove gridTask__item js-buttonRemove">
+    <button class="section__button section__buttonRemove section__listItemElement js-buttonRemove">
     </button>
     </li>`;
     }
