@@ -31,7 +31,6 @@
 .section__button {
   width: 30px;
   height: 30px;
-  border: 2px solid teal;
   justify-self: center;
 }
 .section__button:hover {

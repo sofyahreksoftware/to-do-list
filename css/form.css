@@ -23,7 +23,8 @@
   color: white;
   flex-basis: 1;
   flex-grow: 1;
-  padding: 5px;
+  padding: 8px;
+  border: 1px solid teal;
 }
 @media (max-width: 767px) {
   .form__button {
