@@ -32,6 +32,7 @@
   width: 30px;
   height: 30px;
   justify-self: center;
+  border: none;
 }
 .section__button:hover {
   cursor: pointer;
