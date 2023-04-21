@@ -1,10 +1,16 @@
 html {
-    box-sizing: border-box;
-  }
-  
-  *, ::after, ::before {
-    box-sizing: inherit;
-  }
-  
+  box-sizing: border-box;
+}
 
-  
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ddd;
+  max-width: 1000px;
+  font-family: "Lato", sans-serif;
+  margin: 0 auto;
+}

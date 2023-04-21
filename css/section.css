@@ -1,21 +1,23 @@
 .section {
   background-color: white;
-  margin: 10px 40px;
+  margin: 19px 40px;
   padding: 10px;
 }
 .section__header {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ddd;
   border-width: 0 0 1px;
+  font-size: 22px;
+  margin-top: 0;
 }
 .section__list {
   list-style-type: none;
   margin: 50px auto;
-  padding: 0;
 }
 .section__listItem {
   border-bottom: 1px solid #ddd;
   margin: 10px 0;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
   grid-gap: 10px;
@@ -23,17 +25,15 @@
 .section__listItemElement {
   align-self: center;
 }
-
 .section__taskContent--crossed {
   text-decoration: line-through;
 }
 .section__button {
   width: 30px;
   height: 30px;
-  border: none;
+  border: 2px solid teal;
   justify-self: center;
 }
-
 .section__button:hover {
   cursor: pointer;
 }
