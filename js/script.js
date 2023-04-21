@@ -1,14 +1,5 @@
 {
-  const tasks = [
-    {
-      content: "example content",
-      done: false,
-    },
-    {
-      content: "example content",
-      done: true,
-    },
-  ];
+  const tasks = [];
 
   toggleTaskDone = (index) => {
     tasks[index].done = !tasks[index].done;
@@ -24,10 +15,7 @@
     tasks.push({ content: newTaskContent });
     render();
   };
-  removeFirstTwoTasks = () => {
-    tasks.splice(0, 2);
-    render();
-  };
+   
   const onFormSubmit = (event, taskInput, form) => {
     event.preventDefault();
 
@@ -77,7 +65,6 @@
   };
 
   const init = () => {
-    removeFirstTwoTasks();
     render();
 
     const form = document.querySelector(".js-form");
