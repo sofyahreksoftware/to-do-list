@@ -52,7 +52,6 @@
   background-position: center;
 }
 .section__buttonRemove {
-  background-image: url("https://i.postimg.cc/pXwq4Cqq/basket.png");
-  background-size: contain;
-  background-position: center;
+  background-color: red;
+  color: white;
 }

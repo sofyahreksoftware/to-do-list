@@ -55,7 +55,7 @@
     }"></button> 
     <p class="section__listItemElement section__taskContent
     ${task.done ? "section__taskContent--crossed" : ""}">${task.content}</p>
-    <button class="section__button section__buttonRemove section__listItemElement js-buttonRemove">
+    <button class="section__button section__buttonRemove section__listItemElement js-buttonRemove"><i class="fa fa-trash"></i>
     </button>
     </li>`;
     }
