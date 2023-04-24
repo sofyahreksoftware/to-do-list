@@ -7,13 +7,12 @@
   .form {
     flex-wrap: wrap;
     flex-direction: column;
-    grid-gap: 7px;
   }
 }
 .form__input {
   flex-basis: 5;
   flex-grow: 5;
-  margin: 0px 10px;
+  margin: 0 10px;
   padding: 8px;
   border: 1px solid #ddd;
 }
