@@ -53,8 +53,8 @@
     <button class="list__button list__itemElement js-buttonDone ${
       task.done ? "list__buttonCheckmark" : "list__buttonGreen"
     }"></button> 
-    <p class="list__itemElement list__taskContent
-    ${task.done ? "list__taskContent--crossed" : ""}">${task.content}</p>
+    <span class="list__itemElement list__taskContent
+    ${task.done ? "list__taskContent--crossed" : ""}">${task.content}</span>
     <button class="list__button list__buttonRemove list__itemElement js-buttonRemove"><i class="fa fa-trash"></i>
     </button>
     </li>`;
