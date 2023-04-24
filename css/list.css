@@ -28,12 +28,10 @@
 .list__button:active {
   border: 2px solid black;
 }
-.list__buttonGreen {
-  background-image: url("https://i.postimg.cc/7br2VSqR/buttondone1.png");
-  background-size: contain;
-  background-position: center;
+.list__button--green {
+  background-color: green;
 }
-.list__buttonCheckmark {
+.list__button--checkmark {
   background-image: url("https://i.postimg.cc/tgw7yBmm/buttondone2.png");
   background-size: contain;
   background-position: center;

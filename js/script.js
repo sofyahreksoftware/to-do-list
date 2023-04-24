@@ -49,15 +49,26 @@
 
     let htmlString = "";
     for (const task of tasks) {
-      htmlString += `<li class="list__item">
-    <button class="list__button list__itemElement js-buttonDone ${
-      task.done ? "list__buttonCheckmark" : "list__buttonGreen"
-    }"></button> 
-    <span class="list__itemElement list__taskContent
-    ${task.done ? "list__taskContent--crossed" : ""}">${task.content}</span>
-    <button class="list__button list__buttonRemove list__itemElement js-buttonRemove"><i class="fa fa-trash"></i>
-    </button>
-    </li>`;
+      htmlString += 
+       `<li class="list__item">
+
+      <button 
+      class="list__button list__button--green list__itemElement js-buttonDone 
+      ${task.done ? "list__button--checkmark" : ""}">
+      </button> 
+
+      <span 
+      class="list__itemElement list__taskContent
+      ${task.done ? "list__taskContent--crossed" : ""}">
+      ${task.content}
+      </span>
+
+      <button
+      class="list__button list__buttonRemove list__itemElement js-buttonRemove">
+      <i class="fa fa-trash"></i>
+      </button>
+
+       </li>`;
     }
     tasksList.innerHTML = htmlString;
 
