@@ -15,7 +15,7 @@
     tasks.push({ content: newTaskContent });
     render();
   };
-   
+
   const onFormSubmit = (event, taskInput, form) => {
     event.preventDefault();
 
@@ -49,13 +49,13 @@
 
     let htmlString = "";
     for (const task of tasks) {
-      htmlString += 
-       `<li class="list__item">
+      htmlString += `<li class="list__item">
 
-      <button 
-      class="list__button list__button--green list__itemElement js-buttonDone 
-      ${task.done ? "list__button--checkmark" : ""}">
-      </button> 
+     
+       <button 
+       class="list__button list__button--green list__itemElement js-buttonDone">
+       ${task.done ? '<i class="fa fa-check" aria-hidden="true"></i>' : ""}
+       </button> 
 
       <span 
       class="list__itemElement list__taskContent

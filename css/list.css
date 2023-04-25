@@ -30,11 +30,7 @@
 }
 .list__button--green {
   background-color: green;
-}
-.list__button--checkmark {
-  background-image: url("https://i.postimg.cc/tgw7yBmm/buttondone2.png");
-  background-size: contain;
-  background-position: center;
+  color: white;
 }
 .list__buttonRemove {
   background-color: red;
