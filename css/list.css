@@ -21,6 +21,7 @@
   height: 30px;
   justify-self: center;
   border: none;
+  transition: background-color 1s;
 }
 .list__button:hover {
   cursor: pointer;
@@ -32,7 +33,13 @@
   background-color: green;
   color: white;
 }
+.list__button--green:hover {
+  background-color: hsl(120, 100%, 35%);
+}
 .list__buttonRemove {
-  background-color: red;
+  background-color: hsl(0, 100%, 45%);
   color: white;
+}
+.list__buttonRemove:hover {
+  background-color: hsl(0, 100%, 60%);
 }
