@@ -22,6 +22,7 @@
   flex-grow: 1;
   padding: 8px;
   border: 1px solid teal;
+  transition: background-color 1s
 }
 @media (max-width: 767px) {
   .form__input {
@@ -30,5 +31,5 @@
 }
 .form__button:hover {
   cursor: pointer;
-  background-color: hsl(180, 100%, 21%);
+  background-color: hsl(180, 100%, 32%);
 }
