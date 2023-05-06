@@ -49,10 +49,10 @@
 
     let htmlString = "";
     for (const task of tasks) {
-      htmlString += `<li class="list__item">
-
+      htmlString += 
+       `<li class="list__item">
      
-       <button 
+      <button 
        class="list__button list__button--green list__itemElement js-buttonDone">
        ${task.done ? '<i class="fa fa-check" aria-hidden="true"></i>' : ""}
        </button> 
