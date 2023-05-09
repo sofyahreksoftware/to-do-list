@@ -10,4 +10,17 @@
   font-size: 22px;
   margin-top: 0;
 }
-
+.section__button {
+  color: teal;
+  border: none;
+  background-color: white;
+  transition: 1s;
+}
+.section__button:hover {
+  cursor: pointer;
+  color: hsl(180, 100%, 32%);
+}
+.section__header--withoutBorder {
+  border: none;
+  margin-bottom: 0;
+}

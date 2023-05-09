@@ -35,6 +35,7 @@
     <link href="css/header.css" rel="stylesheet" />
     <link href="css/section.css" rel="stylesheet" />
     <link href="css/list.css" rel="stylesheet" />
+    <link href="css/grid.css" rel="stylesheet" />
     <script defer src="js/script.js"></script>
     <link
       rel="stylesheet"
@@ -57,7 +58,15 @@
       </section>
 
       <section class="section">
-        <h2 class="section__header">Lista zadań</h2>
+        <div class="grid">
+          <h2
+            class="section__header section__header--withoutBorder grid__header"
+          >
+            Lista zadań
+          </h2>
+          <span class="js-buttons grid__buttons">
+          </span>
+        </div>
 
         <ul class="js-tasksList list"></ul>
       </section>
