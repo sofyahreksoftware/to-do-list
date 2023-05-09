@@ -2,29 +2,25 @@
   tasks = [];
 
   toggleTaskDone = (index) => {
-    tasks=[
-    ...tasks.slice(0,index),
-    tasks[index].done = !tasks[index].done,
-    ...tasks.slice(index + 1)
-    ]
+    const updatedTasks = [
+      ...tasks.slice(0, index),
+      { ...tasks[index], done: !tasks[index].done },
+      ...tasks.slice(index + 1),
+    ];
+
+    tasks = updatedTasks;
 
     render();
   };
 
   const removeTask = (index) => {
-    tasks = [
-    ...tasks.slice(0, index),
-    ...tasks.slice(index + 1)
-  ];
+    tasks = [...tasks.slice(0, index), ...tasks.slice(index + 1)];
 
     render();
   };
 
   const addNewTask = (newTaskContent) => {
-    tasks = [
-    ...tasks, 
-    { content: newTaskContent }
-  ];
+    tasks = [...tasks, { content: newTaskContent }];
 
     render();
   };
@@ -56,7 +52,7 @@
       });
     });
   };
-
+ 
   const render = () => {
     const tasksList = document.querySelector(".js-tasksList");
 
