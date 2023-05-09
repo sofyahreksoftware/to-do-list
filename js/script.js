@@ -58,6 +58,9 @@
     const buttonContainer = document.querySelector(".js-buttons");
     const buttonContainerHTML =
       '<button class="section__button js__hideDoneButton">Ukryj ukończone</button><button class="section__button js__checkDoneButton">Oznacz wszystkie</button>';
+    if (tasks.length > 0) {
+      buttonContainer.innerHTML = buttonContainerHTML;
+    }
   };
 
   const renderTasks = () => {
