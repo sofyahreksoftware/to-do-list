@@ -10,6 +10,9 @@
   grid-template-columns: 1fr 7fr 1fr;
   grid-gap: 10px;
 }
+.list__item--hidden {
+  display: none;
+}
 .list__itemElement {
   align-self: center;
 }
