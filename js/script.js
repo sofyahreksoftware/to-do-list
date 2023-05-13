@@ -1,4 +1,11 @@
 tasks = [];
+
+const completeAllTasks = () => {
+  const completedTasks = tasks.map((task) => ({ ...task, done: true }));
+  tasks = completedTasks;
+  render();
+};
+
 const removeDoneTasks = (doneTask) => {
   doneTask.classList.toggle("list__item--hidden");
 };
@@ -40,13 +47,20 @@ const onFormSubmit = (event, taskInput, form) => {
 
 const bindButtonEvents = () => {
   const hideDoneButton = document.querySelector(".js__hideDoneButton");
-
   const doneTasks = document.querySelectorAll(".js-doneTask");
+
   if (hideDoneButton) {
     hideDoneButton.addEventListener("click", () => {
       doneTasks.forEach((doneTask) => {
         removeDoneTasks(doneTask);
       });
+    });
+  }
+
+  const checkDoneButton = document.querySelector(".js__checkDoneButton");
+  if (checkDoneButton) {
+    checkDoneButton.addEventListener("click", () => {
+      completeAllTasks();
     });
   }
 };
@@ -76,7 +90,7 @@ renderButtons = () => {
   if (tasks.length > 0) {
     buttonContainer.innerHTML = buttonContainerHTML;
   }
-  
+
   bindButtonEvents();
 };
 
