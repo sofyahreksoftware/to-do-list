@@ -24,3 +24,6 @@
   border: none;
   margin-bottom: 0;
 }
+.section__checkAllTasksDoneButton:disabled {
+color:grey
+}
