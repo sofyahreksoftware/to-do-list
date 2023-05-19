@@ -1,7 +1,5 @@
 tasks = [];
 
-const areAllTasksDone = tasks.every((task) => task.done);
-
 const completeAllTasks = () => {
   const completedTasks = tasks.map((task) => ({ ...task, done: true }));
   tasks = completedTasks;
@@ -87,6 +85,8 @@ const bindEvents = () => {
 
 renderButtons = () => {
   const buttonContainer = document.querySelector(".js-buttons");
+  const areAllTasksDone = tasks.every((task) => task.done);
+
   const buttonContainerHTML = `<button class="section__button js__hideDoneButton">Ukryj ukończone</button>
   <button class="section__button js__checkDoneButton section__checkAllTasksDoneButton"${
     areAllTasksDone ? "disabled" : ""
