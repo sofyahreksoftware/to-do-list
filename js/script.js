@@ -1,13 +1,16 @@
 tasks = [];
 
+tasksHidden = false;
+
 const completeAllTasks = () => {
   const completedTasks = tasks.map((task) => ({ ...task, done: true }));
   tasks = completedTasks;
   render();
 };
 
-const hideAllDoneTasks = (doneTask) => {
-  doneTask.classList.toggle("list__item--hidden");
+const hideAllDoneTasks = () => {
+  tasksHidden = !tasksHidden;
+  render();
 };
 
 toggleTaskDone = (index) => {
@@ -51,9 +54,7 @@ const bindButtonEvents = () => {
 
   if (hideDoneTasksButton) {
     hideDoneTasksButton.addEventListener("click", () => {
-      doneTasks.forEach((doneTask) => {
-        hideAllDoneTasks(doneTask);
-      });
+      hideAllDoneTasks();
     });
   }
 
@@ -83,23 +84,19 @@ const bindEvents = () => {
   });
 };
 
-renderButtons = (listItems) => {
+renderButtons = () => {
   const buttonContainer = document.querySelector(".js-buttons");
   const areAllTasksDone = tasks.every((task) => task.done);
-  if (
-    listItems.some((listItem) =>
-      listItem.classlist.contains("list__item--hidden")
-    )
-  ) {
-    hideDoneTasksButtonText = "Pokaż";
-  } else {
-    hideDoneTasksButtonText = "Ukryj";
-  }
 
-  const buttonContainerHTML = `<button class="section__button js__hideDoneButton">${hideDoneTasksButtonText} ukończone</button>
+  const buttonContainerHTML = `
+  <button class="section__button js__hideDoneButton">${
+    tasksHidden ? "Pokaż" : "Ukryj"
+  } ukończone</button>
+
   <button class="section__button js__checkDoneButton section__checkAllTasksDoneButton"${
     areAllTasksDone ? "disabled" : ""
   }>Oznacz wszystkie</button>`;
+
   if (tasks.length > 0) {
     buttonContainer.innerHTML = buttonContainerHTML;
   }
@@ -108,11 +105,12 @@ renderButtons = (listItems) => {
 
 const renderTasks = () => {
   const tasksList = document.querySelector(".js-tasksList");
-  const listItems = document.querySelectorAll(".js-doneTask");
 
   let htmlString = "";
   for (const task of tasks) {
-    htmlString += `<li class="list__item  ${task.done ? "js-doneTask" : ""}">
+    htmlString += `<li class="list__item ${
+      tasksHidden ? "list__item--hidden" : ""
+    } ${task.done ? "js-doneTask" : ""}">
  
   <button 
    class="list__button list__button--green list__itemElement js-buttonDone">
@@ -139,7 +137,7 @@ const renderTasks = () => {
 
 const render = () => {
   renderTasks();
-  renderButtons(listItems);
+  renderButtons();
 };
 
 const init = () => {
