@@ -1,6 +1,6 @@
-tasks = [];
+let tasks = [];
 
-tasksHidden = false;
+let tasksHidden = false;
 
 const completeAllTasks = () => {
   const completedTasks = tasks.map((task) => ({ ...task, done: true }));
