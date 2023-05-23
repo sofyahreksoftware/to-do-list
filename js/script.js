@@ -50,7 +50,6 @@ const onFormSubmit = (event, taskInput, form) => {
 
 const bindButtonEvents = () => {
   const hideDoneTasksButton = document.querySelector(".js__hideDoneButton");
-  const doneTasks = document.querySelectorAll(".js-doneTask");
 
   if (hideDoneTasksButton) {
     hideDoneTasksButton.addEventListener("click", () => {
@@ -108,9 +107,9 @@ const renderTasks = () => {
 
   let htmlString = "";
   for (const task of tasks) {
-    htmlString += `<li class="list__item ${
-      tasksHidden ? "list__item--hidden" : ""
-    } ${task.done ? "js-doneTask" : ""}">
+    htmlString += `<li class="list__item  ${
+      task.done && tasksHidden ? "list__item--hidden" : ""
+    }">
  
   <button 
    class="list__button list__button--green list__itemElement js-buttonDone">
@@ -119,7 +118,7 @@ const renderTasks = () => {
 
   <span 
   class="list__itemElement list__taskContent
-  ${task.done ? "js-doneTask list__taskContent--crossed" : ""}">
+  ${task.done ? "list__taskContent--crossed" : ""}">
   ${task.content}
   </span>
 
