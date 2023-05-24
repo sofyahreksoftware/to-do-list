@@ -7,14 +7,14 @@
 An application provides makind a to-do list. You also can mark and cross done tasks.
 
 ## Technologies
-- **HTML(28.6%) and CSS(35.6%)**
+- **HTML and CSS**
 - Google Fonts
 - Normalize CSS
 - BEM convention
 - Grid
 - Flex
 - Media Queries
-- **Java Script (35.8%)**
+- **Java Script**
 - JS Arrow Functions
 - JS Arrays of Obiects
 - **README**
