@@ -42,9 +42,11 @@
     event.preventDefault();
 
     const newTaskContent = taskInput.value.trim();
+
     if (newTaskContent !== "") {
       addNewTask(newTaskContent);
     }
+
     taskInput.focus();
     form.reset();
   };
@@ -75,9 +77,9 @@
       });
     });
 
-    const togglingTaskDoneButtons = document.querySelectorAll(".js-buttonDone");
+    const toggleTaskDoneButtons = document.querySelectorAll(".js-buttonDone");
 
-    togglingTaskDoneButtons.forEach((togglingTaskDoneButton, index) => {
+    toggleTaskDoneButtons.forEach((togglingTaskDoneButton, index) => {
       togglingTaskDoneButton.addEventListener("click", () => {
         toggleTaskDone(index);
       });
