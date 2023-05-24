@@ -99,9 +99,8 @@
       areAllTasksDone ? "disabled" : ""
     }>Oznacz wszystkie</button>`;
 
-    if (tasks.length > 0) {
-      buttonContainer.innerHTML = buttonContainerHTML;
-    }
+    buttonContainer.innerHTML = tasks.length > 0 ? buttonContainerHTML : "";
+    
     bindButtonEvents();
   };
 
