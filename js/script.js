@@ -107,27 +107,18 @@ const renderTasks = () => {
 
   let htmlString = "";
   for (const task of tasks) {
-    htmlString += `<li class="list__item  ${
-      task.done && tasksHidden ? "list__item--hidden" : ""
-    }">
- 
-  <button 
-   class="list__button list__button--green list__itemElement js-buttonDone">
-   ${task.done ? '<i class="fa fa-check" aria-hidden="true"></i>' : ""}
-   </button> 
-
-  <span 
-  class="list__itemElement list__taskContent
-  ${task.done ? "list__taskContent--crossed" : ""}">
-  ${task.content}
-  </span>
-
-  <button
-  class="list__button list__buttonRemove list__itemElement js-buttonRemove">
-  <i class="fa fa-trash"></i>
-  </button>
-
-   </li>`;
+    htmlString += `
+  <li class="list__item ${task.done && tasksHidden ? "list__item--hidden" : ""}">
+    <button class="list__button list__button--green list__itemElement js-buttonDone">
+      ${task.done ? '<i class="fa fa-check" aria-hidden="true"></i>' : ""}
+    </button> 
+    <span class="list__itemElement list__taskContent ${task.done ? "list__taskContent--crossed" : ""}">
+      ${task.content}
+    </span>
+    <button class="list__button list__buttonRemove list__itemElement js-buttonRemove">
+      <i class="fa fa-trash"></i>
+    </button>
+  </li>`;
   }
   tasksList.innerHTML = htmlString;
 
