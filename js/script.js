@@ -14,7 +14,7 @@
     render();
   };
 
-  toggleTaskDone = (index) => {
+  const toggleTaskDone = (index) => {
     const updatedTasks = [
       ...tasks.slice(0, index),
       { ...tasks[index], done: !tasks[index].done },
