@@ -1,28 +1,27 @@
 .form {
   display: flex;
-  margin: 5px;
+  gap: 7px;
+  flex-wrap: nowrap;
 }
 @media (max-width: 767px) {
   .form {
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     flex-direction: column;
   }
 }
 .form__input {
-  flex-basis: 5;
   flex-grow: 5;
-  margin: 0 10px;
+  margin-left: 10px;
   padding: 8px;
   border: 1px solid #ddd;
 }
 .form__button {
   background-color: teal;
   color: white;
-  flex-basis: 1;
   flex-grow: 1;
   padding: 8px;
   border: 1px solid teal;
-  transition: background-color 1s, scale 1s 0.5s;
+  transition: background-color 1s, scale 1s;
 }
 @media (max-width: 767px) {
   .form__input {
