@@ -1,48 +1,48 @@
-.list {
+.tasks__ {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.list__item {
+.tasks__item {
   border-bottom: 1px solid #ddd;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 7fr 1fr;
   grid-gap: 10px;
 }
-.list__item--hidden {
+.tasks__item--hidden {
   display: none;
 }
-.list__itemElement {
+.tasks__itemElement {
   align-self: center;
 }
-.list__taskContent--crossed {
+.tasks__taskContent--crossed {
   text-decoration: line-through;
 }
-.list__button {
+.tasks__button {
   width: 30px;
   height: 30px;
   justify-self: center;
   border: none;
   transition: background-color 1s;
 }
-.list__button:hover {
+.tasks__button:hover {
   cursor: pointer;
 }
-.list__button:active {
+.tasks__button:active {
   border: 2px solid black;
 }
-.list__button--green {
+.tasks__button--green {
   background-color: green;
   color: white;
 }
-.list__button--green:hover {
+.tasks__button--green:hover {
   background-color: hsl(120, 100%, 35%);
 }
-.list__buttonRemove {
+.tasks__buttonRemove {
   background-color: hsl(0, 100%, 45%);
   color: white;
 }
-.list__buttonRemove:hover {
+.tasks__buttonRemove:hover {
   background-color: hsl(0, 100%, 60%);
 }

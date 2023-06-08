@@ -110,18 +110,18 @@
     let htmlString = "";
     for (const task of tasks) {
       htmlString += `
-    <li class="list__item ${
-      task.done && tasksHidden ? "list__item--hidden" : ""
+    <li class="tasks__item ${
+      task.done && tasksHidden ? "tasks__item--hidden" : ""
     }">
-      <button class="list__button list__button--green list__itemElement js-buttonDone">
+      <button class="tasks__button tasks__button--green tasks__itemElement js-buttonDone">
         ${task.done ? '<i class="fa fa-check" aria-hidden="true"></i>' : ""}
       </button> 
-      <span class="list__itemElement list__taskContent ${
-        task.done ? "list__taskContent--crossed" : ""
+      <span class="tasks__itemElement tasks__taskContent ${
+        task.done ? "tasks__taskContent--crossed" : ""
       }">
         ${task.content}
       </span>
-      <button class="list__button list__buttonRemove list__itemElement js-buttonRemove">
+      <button class="tasks__button tasks__buttonRemove tasks__itemElement js-buttonRemove">
         <i class="fa fa-trash"></i>
       </button>
     </li>`;
