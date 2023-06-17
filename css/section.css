@@ -24,31 +24,9 @@
   font-size: 22px;
   margin-top: 0;
 }
-.section__buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-@media (max-width: 767px) {
-  .section__buttons {
-    grid-template-columns: 1fr;
-  }
-}
-
-.section__button {
-  color: teal;
-  border: none;
-  background-color: white;
-  transition: 1s;
-}
-.section__button:hover {
-  cursor: pointer;
-  color: hsl(180, 100%, 32%);
-}
 .section__title--withoutBorder {
   border: none;
   padding: 10px;
   margin: 0;
 }
-.section__checkAllTasksDoneButton:disabled {
-  color: grey;
-}
+ 

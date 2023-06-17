@@ -91,11 +91,11 @@
     const areAllTasksDone = tasks.every((task) => task.done);
 
     const buttonContainerHTML = `
-    <button class="section__button js__hideDoneButton">${
+    <button class="buttons__button js__hideDoneButton">${
       tasksHidden ? "Pokaż" : "Ukryj"
     } ukończone</button>
   
-    <button class="section__button js__checkDoneButton section__checkAllTasksDoneButton"${
+    <button class="buttons__button js__checkDoneButton buttons_checkAllTasksDoneButton"${
       areAllTasksDone ? "disabled" : ""
     }>Oznacz wszystkie</button>`;
 

@@ -1,0 +1,22 @@
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 767px) {
+    .buttons {
+      grid-template-columns: 1fr;
+    }
+  }
+.buttons__button {
+  color: teal;
+  border: none;
+  background-color: white;
+  transition: 1s;
+}
+.buttons__button:hover {
+  cursor: pointer;
+  color: hsl(180, 100%, 32%);
+}
+.buttons_checkAllTasksDoneButton:disabled {
+  color: grey;
+}
