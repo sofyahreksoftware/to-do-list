@@ -3,7 +3,7 @@
   margin: 19px 40px;
   padding: 10px;
 }
-.section__header {
+.section__header--withButtons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 200px;
@@ -12,7 +12,7 @@
   padding: 11px;
 }
 @media (max-width: 767px) {
-  .section__header {
+  .section__header--withButtons {
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -29,4 +29,3 @@
   padding: 10px;
   margin: 0;
 }
- 
