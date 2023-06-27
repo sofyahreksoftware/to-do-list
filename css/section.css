@@ -3,29 +3,21 @@
   margin: 19px 40px;
   padding: 10px;
 }
-.section__header--withButtons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 200px;
+.section__header {
   border: 1px solid #ddd;
   border-width: 0 0 1px;
-  padding: 11px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
 }
 @media (max-width: 767px) {
-  .section__header--withButtons {
+  .section__header  {
     grid-template-columns: 1fr;
-    grid-gap: 0;
   }
 }
 .section__title {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-width: 0 0 1px;
+  padding: 5px;
   font-size: 22px;
-  margin-top: 0;
-}
-.section__title--withoutBorder {
-  border: none;
-  padding: 10px;
-  margin: 0;
+  padding: 7px;
+  margin: 5px;
 }
