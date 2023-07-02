@@ -56,10 +56,11 @@
 
     if (hideDoneTasksButton) {
       hideDoneTasksButton.addEventListener("click", () => {
-        hideAllDoneTasks();
+        if (tasks.some((task) => task.done)) {
+          hideAllDoneTasks();
+        }
       });
     }
-
     const checkDoneButton = document.querySelector(".js__checkDoneButton");
     if (checkDoneButton) {
       checkDoneButton.addEventListener("click", () => {
@@ -100,7 +101,7 @@
     }>Oznacz wszystkie</button>`;
 
     buttonContainer.innerHTML = tasks.length > 0 ? buttonContainerHTML : "";
-    
+
     bindButtonEvents();
   };
 
